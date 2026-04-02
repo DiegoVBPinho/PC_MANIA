@@ -1,24 +1,40 @@
-public class Cliente {
+public class Cliente
+{
     //atributos
     private String nome;
     private String cpf;
 
+
     //construtor
 
-    Public Cliente (String nome, String cpf)
+    public Cliente(String nome, String cpf)
     {
-
+        this.nome = nome;
+        this.cpf = cpf;
     }
+
 
     //métodos
 
-
+    public float calculaTotalCompra()
+    {
+        return ;
+    }
 
 
 
             //getters
 
-            //setters
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+
+    //setters
 
 
 
