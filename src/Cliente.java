@@ -18,7 +18,7 @@ public class Cliente
 
     public float calculaTotalCompra()
     {
-        return ;
+        return 0 ;
     }
 
 
