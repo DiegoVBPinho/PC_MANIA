@@ -1,20 +1,18 @@
 public class Cliente
 {
-    //atributos
+
     private String nome;
     private String cpf;
+    private Computador []computadores;
 
-
-    //construtor
 
     public Cliente(String nome, String cpf)
     {
         this.nome = nome;
         this.cpf = cpf;
+        this.computadores = null;
+
     }
-
-
-    //métodos
 
     public float calculaTotalCompra()
     {
@@ -22,8 +20,6 @@ public class Cliente
     }
 
 
-
-            //getters
 
     public String getNome() {
         return nome;
@@ -34,8 +30,11 @@ public class Cliente
     }
 
 
-    //setters
+    public Computador[] getComputadores() {
+        return computadores;
+    }
 
-
-
+    public void setComputadores(Computador[] computadores) {
+        this.computadores = computadores;
+    }
 }
