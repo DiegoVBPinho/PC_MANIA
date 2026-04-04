@@ -1,6 +1,17 @@
 public class ProcessarPedido {
 
+    static public Computador[] promocoes; // aqui estarão as promocoes de computadores. Usado para aprendizado.
+    private int quantidadePromocaoTipo1;
+    private int quantidadePromocaoTipo2;
+    private int quantidadePromocaoTipo3;
 
+
+    ProcessarPedido ()
+    {
+        this.quantidadePromocaoTipo1 = 0;
+        this.quantidadePromocaoTipo2 = 0;
+        this.quantidadePromocaoTipo3 = 0;
+    }
 
 
 
@@ -8,18 +19,61 @@ public class ProcessarPedido {
 
     static public void enviaPedido(Computador[] computadores)
     {
+
         System.out.println("---Pedido Enviado!---");
         //imprimindo as posições do vetor.
 
         for (int i = 0; i < computadores.length; i++)
         {
-            System.out.println("iten nº: " (i + 1) + ": ");
+            System.out.println("Item nº " + (i + 1) + ":" );
             computadores[i].mostraPCConfigs();
         }
 
     }
 
+    public void adicionarPedido(int num) //informa o numero da promocão que ele deseja comprar
+    {
+        if(num == 1)
+        {
+          quantidadePromocaoTipo1 ++;
+        } else if (num==2)
+        {
+            quantidadePromocaoTipo2 ++;
+        }
+        else
+        {
+            quantidadePromocaoTipo3 ++;
+        }
 
+
+
+    }
+
+
+
+
+
+
+    public void finalizarPedido() // chama o enviar pedido, de acordo com os tipos de computadores que foram solicitados pelo cliente
+    {
+        int numTotalDeComputadores = quantidadePromocaoTipo1 + quantidadePromocaoTipo2 + quantidadePromocaoTipo3;
+        Computador[] computadores = new Computador[numTotalDeComputadores];
+
+        for(int i = 0; i<quantidadePromocaoTipo1;i++) {
+            computadores[i] = promocoes[0];
+        }
+
+
+        for(int i = quantidadePromocaoTipo1; i<quantidadePromocaoTipo1+quantidadePromocaoTipo2;i++) {
+            computadores[i] = promocoes[1];
+        }
+
+        for(int i = quantidadePromocaoTipo1+quantidadePromocaoTipo2; i<numTotalDeComputadores;i++) {
+            computadores[i] = promocoes[2];
+        }
+
+        enviaPedido(computadores);
+    }
 
 }
 
