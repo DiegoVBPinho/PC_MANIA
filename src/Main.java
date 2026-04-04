@@ -42,7 +42,8 @@ public class Main {
         processa.adicionarPedido(1);
         processa.adicionarPedido(3);
 
-        processa.finalizarPedido();
+        Computador[] computadors = processa.finalizarPedido();
+        ProcessarPedido.enviaPedido(computadors);
 
 
     }

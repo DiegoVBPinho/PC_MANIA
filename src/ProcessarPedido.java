@@ -15,7 +15,7 @@ public class ProcessarPedido {
 
 
 
-    //precisa fazer método utilitário
+    //precisa fazer  utilitário
 
     static public void enviaPedido(Computador[] computadores)
     {
@@ -27,6 +27,7 @@ public class ProcessarPedido {
         {
             System.out.println("Item nº " + (i + 1) + ":" );
             computadores[i].mostraPCConfigs();
+            System.out.println(" ");
         }
 
     }
@@ -54,7 +55,7 @@ public class ProcessarPedido {
 
 
 
-    public void finalizarPedido() // chama o enviar pedido, de acordo com os tipos de computadores que foram solicitados pelo cliente
+    public Computador[] finalizarPedido() // Retorna lista de computadores do pedido - solicitados pelo cliente
     {
         int numTotalDeComputadores = quantidadePromocaoTipo1 + quantidadePromocaoTipo2 + quantidadePromocaoTipo3;
         Computador[] computadores = new Computador[numTotalDeComputadores];
@@ -72,7 +73,8 @@ public class ProcessarPedido {
             computadores[i] = promocoes[2];
         }
 
-        enviaPedido(computadores);
+        return computadores;
+
     }
 
 }
