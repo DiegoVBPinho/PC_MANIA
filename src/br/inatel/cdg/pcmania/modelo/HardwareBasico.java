@@ -1,3 +1,5 @@
+package br.inatel.cdg.pcmania.modelo;
+
 public class HardwareBasico {
 
     private String nome;

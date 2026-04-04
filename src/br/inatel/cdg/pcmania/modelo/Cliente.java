@@ -1,9 +1,14 @@
+package br.inatel.cdg.pcmania.modelo;
+
+
+
+
 public class Cliente
 {
 
     private String nome;
     private String cpf;
-    private Computador []computadores;
+    private Computador[]computadores;
 
 
     public Cliente(String nome, String cpf)

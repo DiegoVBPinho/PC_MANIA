@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package br.inatel.cdg.pcmania.modelo;
 
 public class Computador {
 

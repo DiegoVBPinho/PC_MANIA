@@ -1,3 +1,6 @@
+package br.inatel.cdg.pcmania.controlador;
+import br.inatel.cdg.pcmania.modelo.Computador;
+
 public class ProcessarPedido {
 
     static public Computador[] promocoes; // aqui estarão as promocoes de computadores. Usado para aprendizado.
@@ -6,7 +9,7 @@ public class ProcessarPedido {
     private int quantidadePromocaoTipo3;
 
 
-    ProcessarPedido ()
+    public ProcessarPedido ()
     {
         this.quantidadePromocaoTipo1 = 0;
         this.quantidadePromocaoTipo2 = 0;

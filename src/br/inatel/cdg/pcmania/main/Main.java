@@ -1,3 +1,12 @@
+package br.inatel.cdg.pcmania.main;
+import br.inatel.cdg.pcmania.controlador.ProcessarPedido;
+import br.inatel.cdg.pcmania.modelo.Computador;
+import br.inatel.cdg.pcmania.modelo.HardwareBasico;
+import br.inatel.cdg.pcmania.modelo.SistemaOperacional;
+import br.inatel.cdg.pcmania.modelo.Cliente;
+import br.inatel.cdg.pcmania.modelo.MemoriaUSB;
+
+
 import java.util.Scanner;
 
 
@@ -7,7 +16,8 @@ public class Main {
 
         //Configurações Iniciais
         int matricula = 537;
-        ProcessarPedido.promocoes = new Computador[3];
+
+        ProcessarPedido.promocoes = new Computador[3];//vetor estatico das promoções.
 
         //Montagem das Promoções
 
