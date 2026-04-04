@@ -1,3 +1,3 @@
-Nome: Diego Victor Boareto Pinho/n
-Curso: GES/n
+Nome: Diego Victor Boareto Pinho - 
+Curso: GES - 
 Matrícula: 537
