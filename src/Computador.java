@@ -46,9 +46,12 @@ public class Computador {
         this.memoria = musb;
     }
 
+    //criado get preço para ver os preços de cada computadores no cliente
 
 
-
+    public float getPreco() {
+        return preco;
+    }
 }
 
 

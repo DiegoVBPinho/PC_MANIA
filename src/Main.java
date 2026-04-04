@@ -45,6 +45,13 @@ public class Main {
         Computador[] computadors = processa.finalizarPedido();
         ProcessarPedido.enviaPedido(computadors);
 
+        Cliente client = new Cliente("Diego Victor", "0900");
+        client.setComputadores(computadors);
+
+
+        System.out.println(client.calculaTotalCompra());
+
+
 
     }
 

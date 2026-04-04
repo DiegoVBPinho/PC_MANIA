@@ -16,7 +16,12 @@ public class Cliente
 
     public float calculaTotalCompra()
     {
-        return 0 ;
+        float precoTotal = 0;
+        for(int i = 0; i<this.computadores.length;i++)
+        {
+            precoTotal+=computadores[i].getPreco();
+        }
+        return precoTotal ;
     }
 
 
@@ -30,9 +35,7 @@ public class Cliente
     }
 
 
-    public Computador[] getComputadores() {
-        return computadores;
-    }
+
 
     public void setComputadores(Computador[] computadores) {
         this.computadores = computadores;
