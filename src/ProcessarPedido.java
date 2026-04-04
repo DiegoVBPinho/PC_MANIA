@@ -32,7 +32,7 @@ public class ProcessarPedido {
 
     }
 
-    public void adicionarPedido(int num) //informa o numero da promocão que ele deseja comprar
+    public void adicionarPedido(int num) //Acumula os tipos informados no momento de aquisição.
     {
         if(num == 1)
         {
@@ -41,7 +41,7 @@ public class ProcessarPedido {
         {
             quantidadePromocaoTipo2 ++;
         }
-        else
+        else if (num== 3)
         {
             quantidadePromocaoTipo3 ++;
         }
@@ -49,11 +49,6 @@ public class ProcessarPedido {
 
 
     }
-
-
-
-
-
 
     public Computador[] finalizarPedido() // Retorna lista de computadores do pedido - solicitados pelo cliente
     {

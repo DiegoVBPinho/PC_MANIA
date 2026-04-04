@@ -1,6 +1,11 @@
+import java.util.Scanner;
+
+
 public class Main {
     static void main(String[] args) {
         int matricula = 537;
+
+
         ProcessarPedido.promocoes = new Computador[3];
 
         HardwareBasico[] hardware = new HardwareBasico[3];
@@ -30,26 +35,53 @@ public class Main {
         ProcessarPedido.promocoes[2] = new Computador("Dell", matricula+5678, new SistemaOperacional("Windows 10", 64),hardware);
         ProcessarPedido.promocoes[2].addMemoriaUSB(new MemoriaUSB("Pen-drive", 32));
 
+        Cliente client = new Cliente("Diego Victor", "0900");
 
-        ProcessarPedido processa = new ProcessarPedido();
+        ProcessarPedido processa = new ProcessarPedido(); // instacia de Pedidos
 
+        Scanner input = new Scanner(System.in);
+        while(true)
+        {
 
-        processa.adicionarPedido(1);
-        processa.adicionarPedido(2);
-        processa.adicionarPedido(3);
-        processa.adicionarPedido(2);
-        processa.adicionarPedido(2);
-        processa.adicionarPedido(1);
-        processa.adicionarPedido(3);
+            System.out.println("Digite a Promocao que voce deseja adquirir(1, 2 ou 3): ");
+            System.out.println("Digite 0, caso deseje finalizar sua compra! ");
 
+            int opcao = input.nextInt();
+            if(opcao == 0)
+            {
+                break;
+            }
+
+            processa.adicionarPedido(opcao); //Acumulativo de computadores que foram comprados pelo cliente
+
+        }
+
+        //Momento de enviar o pedido e escrever na tela o total de compra, os dados do Cliente e as promoções adquiridas.
+
+        System.out.println();
+        System.out.println(client.getNome());
+        System.out.println(client.getCpf());
         Computador[] computadors = processa.finalizarPedido();
         ProcessarPedido.enviaPedido(computadors);
-
-        Cliente client = new Cliente("Diego Victor", "0900");
         client.setComputadores(computadors);
+        System.out.println("Total de Compra R$: " + client.calculaTotalCompra());
 
 
-        System.out.println(client.calculaTotalCompra());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
