@@ -1,5 +1,5 @@
-package br.inatel.cdg.pcmania.controlador;
-import br.inatel.cdg.pcmania.modelo.Computador;
+package br.inatel.cdg.Processamento;
+import br.inatel.cdg.computador.Computador;
 
 public class ProcessarPedido {
 

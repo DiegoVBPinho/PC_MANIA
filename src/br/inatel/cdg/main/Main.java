@@ -1,10 +1,11 @@
-package br.inatel.cdg.pcmania.main;
-import br.inatel.cdg.pcmania.controlador.ProcessarPedido;
-import br.inatel.cdg.pcmania.modelo.Computador;
-import br.inatel.cdg.pcmania.modelo.HardwareBasico;
-import br.inatel.cdg.pcmania.modelo.SistemaOperacional;
-import br.inatel.cdg.pcmania.modelo.Cliente;
-import br.inatel.cdg.pcmania.modelo.MemoriaUSB;
+package br.inatel.cdg.main;
+import br.inatel.cdg.Processamento.ProcessarPedido;
+import br.inatel.cdg.computador.Computador;
+import br.inatel.cdg.computador.HardwareBasico;
+import br.inatel.cdg.computador.SistemaOperacional;
+import br.inatel.cdg.cliente.Cliente;
+
+import br.inatel.cdg.computador.MemoriaUSB;
 
 
 import java.util.Scanner;

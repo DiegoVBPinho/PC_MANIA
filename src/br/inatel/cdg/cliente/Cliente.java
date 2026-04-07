@@ -1,7 +1,7 @@
-package br.inatel.cdg.pcmania.modelo;
+package br.inatel.cdg.cliente;
 
 
-
+import br.inatel.cdg.computador.Computador;
 
 public class Cliente
 {

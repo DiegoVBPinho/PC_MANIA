@@ -1,4 +1,4 @@
-package br.inatel.cdg.pcmania.modelo;
+package br.inatel.cdg.computador;
 
 public class MemoriaUSB {
     private String nome;
